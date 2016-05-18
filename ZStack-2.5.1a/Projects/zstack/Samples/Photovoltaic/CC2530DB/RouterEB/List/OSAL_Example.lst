@@ -1,0 +1,309 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         18/Feb/2016  20:17:11 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\Source\OSAL_Example.c         #
+#    Command line       =  -f G:\Agriculture_Work\ZStack-2.5.1a\Projects\zsta #
+#                          ck\Samples\Photovoltaic\CC2530DB\..\..\..\Tools\CC #
+#                          2530DB\f8wRouter.cfg (-DCPU32MHZ                   #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8       #
+#                          -DMAC_CFG_RX_MAX=5 -DRTR_NWK) -f                   #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\..\..\..\Tools\CC253 #
+#                          0DB\f8wConfig.cfg (-DZIGBEEPRO -DSECURE=0          #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x02000000                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFF1                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 G:\Agriculture_Work\ZStack- #
+#                          2.5.1a\Projects\zstack\Samples\Photovoltaic\Source #
+#                          \OSAL_Example.c -D ZTOOL_P1 -D NWK_AUTO_POLL -D    #
+#                          METEOROLOGICAL -lC G:\Agriculture_Work\ZStack-2.5. #
+#                          1a\Projects\zstack\Samples\Photovoltaic\CC2530DB\R #
+#                          outerEB\List\ -lA G:\Agriculture_Work\ZStack-2.5.1 #
+#                          a\Projects\zstack\Samples\Photovoltaic\CC2530DB\Ro #
+#                          uterEB\List\ --diag_suppress Pe001,Pa010 -o        #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\RouterEB\Obj\ -e     #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I G:\Agriculture_Work\ZStack-2.5.1a\Projects\zsta #
+#                          ck\Samples\Photovoltaic\CC2530DB\ -I               #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\..\Source\ -I        #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\..\..\..\ZMain\TI253 #
+#                          0DB\ -I G:\Agriculture_Work\ZStack-2.5.1a\Projects #
+#                          \zstack\Samples\Photovoltaic\CC2530DB\..\..\..\..\ #
+#                          ..\Components\hal\include\ -I                      #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\hal\target\CC2530EB\ -I                      #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\mac\include\ -I G:\Agriculture_Work\ZStack-2 #
+#                          .5.1a\Projects\zstack\Samples\Photovoltaic\CC2530D #
+#                          B\..\..\..\..\..\Components\mac\high_level\ -I     #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\mac\low_level\srf04\ -I                      #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\mac\low_level\srf04\single_chip\ -I          #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\mt\ -I G:\Agriculture_Work\ZStack-2.5.1a\Pro #
+#                          jects\zstack\Samples\Photovoltaic\CC2530DB\..\..\. #
+#                          .\..\..\Components\osal\include\ -I                #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\services\saddr\ -I                           #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\services\sdata\ -I                           #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\stack\af\ -I G:\Agriculture_Work\ZStack-2.5. #
+#                          1a\Projects\zstack\Samples\Photovoltaic\CC2530DB\. #
+#                          .\..\..\..\..\Components\stack\nwk\ -I             #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\stack\sapi\ -I G:\Agriculture_Work\ZStack-2. #
+#                          5.1a\Projects\zstack\Samples\Photovoltaic\CC2530DB #
+#                          \..\..\..\..\..\Components\stack\sec\ -I           #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\stack\sys\ -I G:\Agriculture_Work\ZStack-2.5 #
+#                          .1a\Projects\zstack\Samples\Photovoltaic\CC2530DB\ #
+#                          ..\..\..\..\..\Components\stack\zdo\ -I            #
+#                          G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\zmac\ -I G:\Agriculture_Work\ZStack-2.5.1a\P #
+#                          rojects\zstack\Samples\Photovoltaic\CC2530DB\..\.. #
+#                          \..\..\..\Components\zmac\f8w\ -Ohz                #
+#                          --require_prototypes                               #
+#    List file          =  G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\RouterEB\List\OSAL_E #
+#                          xample.lst                                         #
+#    Object file        =  G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\ #
+#                          Samples\Photovoltaic\CC2530DB\RouterEB\Obj\OSAL_Ex #
+#                          ample.r51                                          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+G:\Agriculture_Work\ZStack-2.5.1a\Projects\zstack\Samples\Photovoltaic\Source\OSAL_Example.c
+      1          #include "ZComDef.h"
+      2          #include "hal_drivers.h"  //硬件驱动头文件
+      3          #include "OSAL.h"         //操作系统头文件
+      4          #include "OSAL_Tasks.h"   //操作系统任务头文件
+      5          
+      6          #if defined ( MT_TASK )   //串口应用头文件
+      7            #include "MT.h"
+      8            #include "MT_TASK.h"
+      9          #endif
+     10          
+     11          #include "nwk.h"          //网络层头文件
+     12          #include "APS.h"          //应用支持层头文件
+     13          #include "ZDApp.h"        //设备对象头文件
+     14          
+     15          #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZIGBEE_PANID_CONFLICT )
+     16            #include "ZDNwkMgr.h"
+     17          #endif
+     18          
+     19          #if defined ( ZIGBEE_FRAGMENTATION )
+     20            #include "aps_frag.h"
+     21          #endif
+     22          #include "Common.h"
+     23          
+     24          // 任务注册
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     25          const pTaskEventHandlerFn tasksArr[] = {
+   \                     tasksArr:
+   \   000000   ....         DW ??macEventLoop?relay
+   \   000002   ....         DW ??nwk_event_loop?relay
+   \   000004   ....         DW ??Hal_ProcessEvent?relay
+   \   000006   ....         DW ??APS_event_loop?relay
+   \   000008   ....         DW ??APSF_ProcessEvent?relay
+   \   00000A   ....         DW ??ZDApp_event_loop?relay
+   \   00000C   ....         DW ??ZDNwkMgr_event_loop?relay
+   \   00000E   ....         DW ??GenericApp_ProcessEvent?relay
+     26            macEventLoop,           //MAC任务循环
+     27            nwk_event_loop,         //网络层任务函数
+     28            Hal_ProcessEvent,       //硬件层函数
+     29          #if defined( MT_TASK )
+     30            MT_ProcessEvent,        //串口支持层定义
+     31          #endif
+     32            APS_event_loop,         //应用支持层任务事件函数
+     33          #if defined ( ZIGBEE_FRAGMENTATION )
+     34            APSF_ProcessEvent,
+     35          #endif
+     36            ZDApp_event_loop,       //设备对象层函数
+     37          #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZIGBEE_PANID_CONFLICT )
+     38            ZDNwkMgr_event_loop,
+     39          #endif
+     40            GenericApp_ProcessEvent //自己定义的任务处理函数
+     41          };
+     42          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     43          const uint8 tasksCnt = sizeof( tasksArr ) / sizeof( tasksArr[0] );
+   \                     tasksCnt:
+   \   000000   08           DB 8
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     44          uint16 *tasksEvents;
+   \                     tasksEvents:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+     45          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     46          void osalInitTasks( void )//完成了任务ID的分配，以及所有任务的初始化
+   \                     osalInitTasks:
+     47          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     48            uint8 taskID = 0;
+     49            //分配内存空间
+     50            tasksEvents = (uint16 *)osal_mem_alloc( sizeof( uint16 ) * tasksCnt);
+   \   000004                ; Setup parameters for call to function osal_mem_alloc
+   \   000004   7A10         MOV     R2,#0x10
+   \   000006   7B00         MOV     R3,#0x0
+   \   000008   12....       LCALL   ??osal_mem_alloc?relay
+   \   00000B   90....       MOV     DPTR,#tasksEvents
+   \   00000E   EA           MOV     A,R2
+   \   00000F   F0           MOVX    @DPTR,A
+   \   000010   A3           INC     DPTR
+   \   000011   EB           MOV     A,R3
+   \   000012   F0           MOVX    @DPTR,A
+     51            osal_memset( tasksEvents, 0, (sizeof( uint16 ) * tasksCnt));
+   \   000013                ; Setup parameters for call to function osal_memset
+   \   000013   7C10         MOV     R4,#0x10
+   \   000015   7D00         MOV     R5,#0x0
+   \   000017   7900         MOV     R1,#0x0
+   \   000019   12....       LCALL   ??osal_memset?relay
+     52          
+     53            macTaskInit( taskID++ );//MAC层的任务ID号
+   \   00001C                ; Setup parameters for call to function macTaskInit
+   \   00001C   7900         MOV     R1,#0x0
+   \   00001E   12....       LCALL   ??macTaskInit?relay
+     54            nwk_init( taskID++ );   //网络ID分配
+   \   000021                ; Setup parameters for call to function nwk_init
+   \   000021   7901         MOV     R1,#0x1
+   \   000023   12....       LCALL   ??nwk_init?relay
+     55            Hal_Init( taskID++ );   //硬件ID分配
+   \   000026                ; Setup parameters for call to function Hal_Init
+   \   000026   7902         MOV     R1,#0x2
+   \   000028   12....       LCALL   ??Hal_Init?relay
+     56          #if defined( MT_TASK )
+     57            MT_TaskInit( taskID++ );
+     58          #endif
+     59            APS_Init( taskID++ );
+   \   00002B                ; Setup parameters for call to function APS_Init
+   \   00002B   7903         MOV     R1,#0x3
+   \   00002D   12....       LCALL   ??APS_Init?relay
+     60          #if defined ( ZIGBEE_FRAGMENTATION )
+     61            APSF_Init( taskID++ );
+   \   000030                ; Setup parameters for call to function APSF_Init
+   \   000030   7904         MOV     R1,#0x4
+   \   000032   12....       LCALL   ??APSF_Init?relay
+     62          #endif
+     63            ZDApp_Init( taskID++ );
+   \   000035                ; Setup parameters for call to function ZDApp_Init
+   \   000035   7905         MOV     R1,#0x5
+   \   000037   12....       LCALL   ??ZDApp_Init?relay
+     64          #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZIGBEE_PANID_CONFLICT )
+     65            ZDNwkMgr_Init( taskID++ );
+   \   00003A                ; Setup parameters for call to function ZDNwkMgr_Init
+   \   00003A   7906         MOV     R1,#0x6
+   \   00003C   12....       LCALL   ??ZDNwkMgr_Init?relay
+     66          #endif
+     67            GenericApp_Init( taskID );//自己任务初始化函数
+   \   00003F                ; Setup parameters for call to function GenericApp_Init
+   \   00003F   7907         MOV     R1,#0x7
+   \   000041   12....       LCALL   ??GenericApp_Init?relay
+     68          }
+   \   000044   D083         POP     DPH
+   \   000046   D082         POP     DPL
+   \   000048   02....       LJMP    ?BRET
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??osalInitTasks?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    osalInitTasks
+     69          
+     70          /*********************************************************************
+     71          *********************************************************************/
+
+   Maximum stack usage in bytes:
+
+     Function             ISTACK PSTACK XSTACK
+     --------             ------ ------ ------
+     osalInitTasks            2      0      0
+       -> osal_mem_alloc      4      0      0
+       -> osal_memset         4      0      0
+       -> macTaskInit         4      0      0
+       -> nwk_init            4      0      0
+       -> Hal_Init            4      0      0
+       -> APS_Init            4      0      0
+       -> APSF_Init           4      0      0
+       -> ZDApp_Init          4      0      0
+       -> ZDNwkMgr_Init       4      0      0
+       -> GenericApp_Init     4      0      0
+
+
+   Segment part sizes:
+
+     Function/Label        Bytes
+     --------------        -----
+     tasksArr                16
+     tasksCnt                 1
+     tasksEvents              2
+     osalInitTasks           75
+     ??osalInitTasks?relay    6
+
+ 
+ 75 bytes in segment BANKED_CODE
+  6 bytes in segment BANK_RELAYS
+ 17 bytes in segment XDATA_ROM_C
+  2 bytes in segment XDATA_Z
+ 
+ 81 bytes of CODE  memory
+ 17 bytes of CONST memory
+  2 bytes of XDATA memory
+
+Errors: none
+Warnings: none
