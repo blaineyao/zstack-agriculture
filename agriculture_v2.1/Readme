@@ -1,0 +1,15 @@
+Agricultural Internet of Things
+============================================================================
+*COMPANY CONFIDENTIAL.  DO NOT DISTRIBUTE OR REPRODUCE.*
+*Copyright (c) 2015 Shanghai  University*
+
+DESCRIPTION
+===========
+The program, namely agriculture, is used to receive the udp data which is send
+from the getway. The getway is a machine that tansmit the data gathered by sensors.
+
+PREPARATIONS
+============
+You can start the program by the start.sh. In which you should assign the localip, 
+localport, RedisServerIp, RedisServerPort.
+If you want to start the program directly. you can use -h for more help.
