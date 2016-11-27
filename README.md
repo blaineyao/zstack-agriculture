@@ -1,7 +1,7 @@
 # zstack-agriculture
 Autohor:shanghai university
 
-Author info:http://www.scie-ce.shu.edu.cn/Default.aspx?tabid=17377
+[Author Info](http://www.scie-ce.shu.edu.cn/Default.aspx?tabid=17377)
 
 Email: jinyanliang@staff.shu.edu.cn / blaine.yao.shu@gmail.com
 ***
