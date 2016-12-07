@@ -16,3 +16,4 @@ Email: jinyanliang@staff.shu.edu.cn / blaine.yao.shu@gmail.com
 
 ### 成员简介
 * blaineyao, email:blaine.yao.shu@gmail.com
+* ZhouLenz, email:zhrunzi@126.com
