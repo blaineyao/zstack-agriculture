@@ -15,4 +15,4 @@ Email: jinyanliang@staff.shu.edu.cn / blaine.yao.shu@gmail.com
 * agriculture_v2.1包含了SRC-Server的source code.
 
 ### 成员简介
-* blaineyao, Email:blaine.yao.shu@gmail.com
+* blaineyao, email:blaine.yao.shu@gmail.com
