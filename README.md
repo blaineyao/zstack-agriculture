@@ -18,4 +18,4 @@ Email: jinyanliang@staff.shu.edu.cn / blaine.yao.shu@gmail.com
 * blaineyao
 
 > graduated from shanghai university
-Email:blaine.yao.shu@gmail.com
+> Email:blaine.yao.shu@gmail.com
